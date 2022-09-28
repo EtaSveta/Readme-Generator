@@ -81,7 +81,7 @@ function init() {
     .then((data) => {
         const genMark = generateMarkdown(data)
         console.log(genMark);
-        return writeToFile();
+        return writeToFile(genMark);
     })
     .catch((error) => {
         console.log(error);
