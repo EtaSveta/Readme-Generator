@@ -22,8 +22,7 @@
   asdf
   
   ## License
-  
-    Licensed under the [MIT](https://opensource.org/licenses/MIT) license
+  Licensed under the [MIT](https://opensource.org/licenses/MIT) license
     
   
   ## Contributing
