@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('./develop/utils/generateMarkdown.js');
 const fs = require('fs');
 
 // const { default: inquirer } = require("inquirer");
@@ -30,7 +30,8 @@ const questions = [
     {
         type: 'input',
         name: 'license',
-        message: 'License'
+        message: 'License',
+        choices: ['Apache 2.0', 'Boost Software License 1.0', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
     },
     {
         type: 'input',
