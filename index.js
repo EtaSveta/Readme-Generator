@@ -28,10 +28,10 @@ const questions = [
         message: 'Project usage:'
     },
     {
-        type: 'list',
+        type: 'checkbox',
         name: 'license',
         message: 'License',
-        choices: ['Apache 2.0', 'Boost Software License 1.0', 'Eclipse', 'GNU GPL v3', 'IBM', 'ISC', 'MIT', 'SIL', 'Unlicense']
+        choices: ['Apache', 'Boost', 'Eclipse', 'GNU', 'IBM', 'ISC', 'MIT', 'SIL', 'Unlicense']
     },
     {
         type: 'input',

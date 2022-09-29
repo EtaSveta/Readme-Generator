@@ -19,15 +19,15 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   const link = {
-    Apache20: '[Apache 2.0](https://opensource.org/licenses/Apache-2.0)',
-    BoostSoftwareLicense: '[Boost Software License 1.0](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)',
-    Eclipse: '[Eclipse](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)',
-    cnugplv3: '[GNU GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)',
-    IBM: '[IBM](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)',
-    ISC: '[ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
+    Apache: '[Apache 2.0](https://opensource.org/licenses/Apache-2.0)',
+    Boost: '[Boost Software License 1.0](https://www.boost.org/LICENSE_1_0.txt)',
+    Eclipse: '[Eclipse]https://opensource.org/licenses/EPL-1.0)',
+    GNU: '[GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0)',
+    IBM: '[IBM](https://opensource.org/licenses/IPL-1.0)',
+    ISC: '[ISC](https://opensource.org/licenses/ISC)',
     MIT: '[MIT](https://opensource.org/licenses/MIT)',
-    SIL: '[SIL Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)',
-    Unlicense: '[Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
+    SIL: '[SIL Open Font-1.1](https://opensource.org/licenses/OFL-1.1)',
+    Unlicense: '[Unlicense](http://unlicense.org/)'
   }
   return link[license]
 }
@@ -36,11 +36,9 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license) {
-    return `
-    Licensed under the ${renderLicenseLink(license)} license
-    `
+    return`Licensed under the ${renderLicenseLink(license)} license`
   } else {
-    return ''
+    return "";
   }
 
 }
@@ -70,7 +68,7 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
   
-  ## License
+  ## License 
   ${renderLicenseSection(data.license)}
   
   ## Contributing
@@ -82,8 +80,6 @@ function generateMarkdown(data) {
   ## Questions
   ${data.email}
   ${data.github}
-
-
 
 `;
 }
