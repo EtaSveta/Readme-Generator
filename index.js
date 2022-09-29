@@ -28,10 +28,10 @@ const questions = [
         message: 'Project usage:'
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: 'License',
-        choices: ['Apache 2.0', 'Boost Software License 1.0', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
+        choices: ['Apache 2.0', 'Boost Software License 1.0', 'Eclipse', 'GNU GPL v3', 'IBM', 'ISC', 'MIT', 'SIL', 'Unlicense']
     },
     {
         type: 'input',
