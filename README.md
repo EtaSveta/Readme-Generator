@@ -20,26 +20,18 @@ This is a command-line application that runs with Node.js that dynamically gener
   ## Installation
   Here is how to install and set up the README generator:
 
-Clone the repo: git clone git@github.com:vpratnicki/README-generator.git.
+Clone the repo: git clone git@github.com:EtaSveta/Readme-Generator.git
+
 Install NPM package: npm install inquirer@8.2.4
   
   ## Usage
-  f
+  When user runs node index.js, the application uses the inquirer package to prompt user in the command line with a series of questions about their GitHub project and contact information. Then profREADME.md is generated based on the answers.
 
-  ## License
-
-Licensed under the [ISC](https://opensource.org/licenses/ISC) license
-
-  ## Contributing
-  f
-  
-  ## Tests
-  f
-  
+   
   ## Questions
   For additional questions you can contact me:
 
-  f
+  sveta59n@yahoo.com
 
-  GitHub: [github/f](http://github.com/f)
+  GitHub: [github/f](http://github.com/etaSveta)
 
