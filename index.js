@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const generateMarkdown = require('./develop/utils/generateMarkdown.js');
+const generateMarkdown = require('./Develop/utils/generateMarkdown.js');
 const fs = require('fs');
 
 // const { default: inquirer } = require("inquirer");
@@ -10,12 +10,28 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of the Project'
+        message: 'What is the title of the Project? (Required)',
+        validate: nameInput => {
+          if (nameInput) {
+            return true;
+          } else {
+            console.log('Please enter your name!')
+            return false;
+          }
+        }  
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Description of the project'
+        message: 'Description of the project (Required)',
+        validate: descriptionInput => {
+            if (descriptionInput) {
+              return true;
+            } else {
+              console.log('Still need a brief description')
+              return false
+            }
+          }
     },
     {
         type: 'input',
@@ -28,30 +44,46 @@ const questions = [
         message: 'Project usage:'
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
-        message: 'License',
-        choices: ['Apache', 'Boost', 'Eclipse', 'GNU', 'IBM', 'ISC', 'MIT', 'SIL', 'Unlicense']
+        message: 'What license is used for this project?',
+        choices: ['None','Apache', 'Boost', 'Eclipse', 'GNU', 'IBM', 'ISC', 'MIT', 'SIL', 'Unlicense']
     },
     {
         type: 'input',
         name: 'contributing',
-        message: ''
+        message: 'Are there any quidelines for contributing to this application?'
     },
     {
         type: 'input',
         name: 'tests',
-        message: ''
+        message: 'Would you like to include any tests?'
     },
     {
         type: 'input',
         name: 'email',
-        message: ''
+        message: 'What is the email address to reach you with questions? (Required)',
+        validate: emailInput => {
+            if (emailInput) {
+              return true;
+            } else {
+              console.log('Please enter your github username!')
+              return false
+            }
+          }
     },
     {
         type: 'input',
         name: 'github',
-        message: ''
+        message: 'What is your github username? (Required)',
+        validate: githubInput => {
+            if (githubInput) {
+              return true;
+            } else {
+              console.log('Please enter your github username!')
+              return false
+            }
+          }
     }
 ];
 
@@ -76,7 +108,7 @@ function writeToFile(fileContent) {
 }
 
 
-// TODO: Create a function to initialize app
+// Create a function to initialize app
 function init() {
     return inquirer.prompt(questions)
     .then((data) => {

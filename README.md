@@ -1,5 +1,5 @@
 
-  # s
+  # f
 
   undefined
 
@@ -7,32 +7,33 @@
   - [Project Description](#Description)
   - [Installation](#Installation)
   - [Usage](#Usage)
-  - [License](#License)
+  - [License](#license)
   - [Contributing](#Contributing)
   - [Tests](#Tests)
   - [Questions](#Questions)
 
   ## Description
-  s
+  f
 
   ## Installation
-  s
+  f
   
   ## Usage
-  s
-  
-  ## License 
-  Licensed under the undefined license
+  f
+
+  ## License  
+  Licensed under the [Boost Software License 1.0](https://www.boost.org/LICENSE_1_0.txt) license
   
   ## Contributing
-  s
+  f
   
   ## Tests
-  s
+  f
   
   ## Questions
-  s
-  s
+  For additional questions you can contact me:
 
+  f
 
+  GitHub: [github/f](http://github.com/f)
 

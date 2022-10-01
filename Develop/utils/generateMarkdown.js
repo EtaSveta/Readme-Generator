@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Create a function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   const licenseBadge = {
     Apache20: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
@@ -12,11 +11,12 @@ function renderLicenseBadge(license) {
     SIL: '[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)',
     Unlicense: '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
   }
+   
   return licenseBadge[license];
-}
+  
+};
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Create a function that returns the license link
 function renderLicenseLink(license) {
   const link = {
     Apache: '[Apache 2.0](https://opensource.org/licenses/Apache-2.0)',
@@ -29,21 +29,28 @@ function renderLicenseLink(license) {
     SIL: '[SIL Open Font-1.1](https://opensource.org/licenses/OFL-1.1)',
     Unlicense: '[Unlicense](http://unlicense.org/)'
   }
+  
   return link[license]
 }
 
-// TODO: Create a function that returns the license section of README
+// Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (license) {
     return`Licensed under the ${renderLicenseLink(license)} license`
-  } else {
-    return "";
-  }
+  
+};
 
-}
+// function LicenseTableOfContents(license) {
+//   if (license[0]) {
+//       return "";
+//   } else {
+//     return `- [License](#license)`
+//   }  
+// };
 
-// TODO: Create a function to generate markdown for README
+// ${LicenseTableOfContents(data.license)}
+
+// Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
   # ${data.title}
@@ -54,7 +61,7 @@ function generateMarkdown(data) {
   - [Project Description](#Description)
   - [Installation](#Installation)
   - [Usage](#Usage)
-  - [License](#License)
+  - [License](#license)
   - [Contributing](#Contributing)
   - [Tests](#Tests)
   - [Questions](#Questions)
@@ -67,8 +74,8 @@ function generateMarkdown(data) {
   
   ## Usage
   ${data.usage}
-  
-  ## License 
+
+  ## License  
   ${renderLicenseSection(data.license)}
   
   ## Contributing
@@ -78,8 +85,11 @@ function generateMarkdown(data) {
   ${data.tests}
   
   ## Questions
+  For additional questions you can contact me:
+
   ${data.email}
-  ${data.github}
+
+  GitHub: [github/${data.github}](http://github.com/${data.github})
 
 `;
 }
