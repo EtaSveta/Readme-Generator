@@ -1,7 +1,7 @@
 
   # f
 
-  undefined
+  [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
   ## Table of Content
   - [Project Description](#Description)
@@ -21,9 +21,10 @@
   ## Usage
   f
 
-  ## License  
-  Licensed under the [Boost Software License 1.0](https://www.boost.org/LICENSE_1_0.txt) license
-  
+  ## License
+
+Licensed under the [ISC](https://opensource.org/licenses/ISC) license
+
   ## Contributing
   f
   

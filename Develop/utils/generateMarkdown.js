@@ -1,17 +1,18 @@
 // Create a function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   const licenseBadge = {
-    Apache20: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
-    BoostSoftwareLicense: '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)',
+    None: '',
+    Apache: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
+    Boost: '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)',
     Eclipse: '[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)',
-    cnugplv3: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)',
+    GNU: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)',
     IBM: '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)',
     ISC: '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
     MIT: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
     SIL: '[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)',
     Unlicense: '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
   }
-   
+  
   return licenseBadge[license];
   
 };
@@ -36,19 +37,22 @@ function renderLicenseLink(license) {
 // Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-    return`Licensed under the ${renderLicenseLink(license)} license`
-  
+  if (license == 'None') {
+    return '';
+  } else {
+    return`## License
+
+Licensed under the ${renderLicenseLink(license)} license`
+  }
 };
 
-// function LicenseTableOfContents(license) {
-//   if (license[0]) {
-//       return "";
-//   } else {
-//     return `- [License](#license)`
-//   }  
-// };
-
-// ${LicenseTableOfContents(data.license)}
+function LicenseTableOfContents(license) {
+  if (license == 'None') {
+      return "";
+  } else {
+    return `- [License](#license)`
+  }  
+};
 
 // Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -58,13 +62,13 @@ function generateMarkdown(data) {
   ${renderLicenseBadge(data.license)}
 
   ## Table of Content
-  - [Project Description](#Description)
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [License](#license)
-  - [Contributing](#Contributing)
-  - [Tests](#Tests)
-  - [Questions](#Questions)
+  - [Project Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  ${LicenseTableOfContents(data.license)}
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
   ## Description
   ${data.description}
@@ -75,9 +79,8 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
-  ## License  
   ${renderLicenseSection(data.license)}
-  
+
   ## Contributing
   ${data.contributing}
   
