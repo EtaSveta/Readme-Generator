@@ -4,13 +4,10 @@
   ![image](https://user-images.githubusercontent.com/109307665/193426951-98c1bbc4-7572-4565-b4fe-ae036d473a3b.png)
 
   ## Table of Content
-  - [Project Description](#Description)
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [License](#license)
-  - [Contributing](#Contributing)
-  - [Tests](#Tests)
-  - [Questions](#Questions)
+  - [Project Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Questions](#questions)
 
   ## Description
   Every good project needs a quality README with information about the app - what kind of the app it is, what is it for, how to use it, how to install it,  and how to make contributions so that other developers are more likely to use and contribute to the success of the project.
@@ -33,5 +30,5 @@ Install NPM package: npm install inquirer@8.2.4
 
   sveta59n@yahoo.com
 
-  GitHub: [github/f](http://github.com/etaSveta)
+  GitHub: [github/etaSveta](http://github.com/etaSveta)
 
