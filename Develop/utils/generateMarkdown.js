@@ -22,7 +22,7 @@ function renderLicenseLink(license) {
   const link = {
     Apache: '[Apache 2.0](https://opensource.org/licenses/Apache-2.0)',
     Boost: '[Boost Software License 1.0](https://www.boost.org/LICENSE_1_0.txt)',
-    Eclipse: '[Eclipse]https://opensource.org/licenses/EPL-1.0)',
+    Eclipse: '[Eclipse](https://opensource.org/licenses/EPL-1.0)',
     GNU: '[GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0)',
     IBM: '[IBM](https://opensource.org/licenses/IPL-1.0)',
     ISC: '[ISC](https://opensource.org/licenses/ISC)',

@@ -15,7 +15,7 @@ const questions = [
           if (nameInput) {
             return true;
           } else {
-            console.log('Please enter your name!')
+            console.log('Please enter your project name!')
             return false;
           }
         }  
