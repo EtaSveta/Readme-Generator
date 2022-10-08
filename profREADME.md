@@ -1,40 +1,38 @@
 
-  # My awesome Project
+  # Team Info Generator
 
-  [![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
+  
 
   ## Table of Content
   - [Project Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [License](#license)
+  
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
 
   ## Description
-  something great that will save the whole World!
+  This project is a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.
 
   ## Installation
-  no installation required
+  Clone the code into your local machine. Then, install npm by entering the command npm init into the terminal. Then install NPM package: npm install inquirer@8.2.4. And finally, invoke the application by entering node index into command line.
   
   ## Usage
-  to save the World
+  After invoking the application with node index in the command line, asnwer each question prompted. First, you  enter the info for the manager and then may choose whether you'd like to add an enginneer, and intern, or finish building the team. Once the last option is chosen the app generates an HTML file with company's team members' information.
 
-  ## License
-
-Licensed under the [Eclipse](https://opensource.org/licenses/EPL-1.0) license
+  
 
   ## Contributing
-  no guidelines
+  To contribute to Team Info Generator please clone the repo to your local machine and save your code on a separate branch. 
   
   ## Tests
-  no tests required
+  This project was built using Jest framework. To run the tests on application first, run npm install jest --save-dev and then run the test using npm test in the command line.
   
   ## Questions
   For additional questions you can contact me:
 
-  sveta@example.com
+  sv@gmail.com
 
   GitHub: [github/etaSveta](http://github.com/etaSveta)
 
